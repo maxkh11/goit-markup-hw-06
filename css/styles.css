@@ -102,6 +102,15 @@ body {
   margin-right: 50px;
 }
 
+.menu-item::after {
+  display: inline-block;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 .menu-link {
   color: var(--second-accent-color);
   padding: 32px 0;
