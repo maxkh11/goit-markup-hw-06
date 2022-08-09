@@ -103,16 +103,17 @@ body {
   color: var(--second-accent-color);
 }
 
-.menu-item:not(:last-child) {
+
+.menu-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--second-accent-color);
-  margin-right: 50px;
 }
 
-.menu-item {
+.menu-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .menu-link.current::after {
@@ -134,14 +135,11 @@ body {
   color: var(--second-accent-color);
   transition-duration: var(--speed);
   transition-timing-function: var(--cubic);
-
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
-  /* transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .address-tel-container {
