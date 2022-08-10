@@ -12,9 +12,8 @@
   --background-accent-color: #ffffff;
   --background-second-color: #2f303a;
   --fill-color: #afb1b8;
-  --speed: 250ms ;
-  --cubic: cubic-bezier(0.4, 0, 0.2, 1)
-
+  --speed: 500ms;
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -103,7 +102,6 @@ body {
   color: var(--second-accent-color);
 }
 
-
 .menu-item {
   font-weight: 500;
   font-size: 14px;
@@ -133,8 +131,7 @@ body {
   padding: 32px 0;
   display: flex;
   color: var(--second-accent-color);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: color var(--speed) var(--cubic);
 }
 
 .menu-link:hover,
@@ -160,8 +157,7 @@ body {
   padding: 32px 0;
   display: flex;
   align-items: center;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: color var(--speed) var(--cubic);
 }
 
 .social-icon-header {
@@ -185,8 +181,7 @@ body {
   color: var(--accent-text-color);
   padding: 32px 0;
   display: flex;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: color var(--speed) var(--cubic);
 }
 
 .phone-number:hover,
@@ -233,8 +228,7 @@ body {
   font-family: inherit;
   border: none;
   border-radius: 4px;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: background-color var(--speed) var(--cubic);
 }
 
 .main-button:hover,
@@ -325,7 +319,7 @@ body {
   margin-right: 30px;
 }
 
-.command-item-wraper { 
+.command-item-wraper {
   position: absolute;
   height: 70px;
   width: 100%;
@@ -335,7 +329,6 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(47, 48, 58, 0.8);
-  
 }
 
 .text-wraper {
@@ -409,7 +402,6 @@ body {
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
-  
 }
 
 .social-list-link {
@@ -420,14 +412,12 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: background-color var(--speed) var(--cubic);
 }
 
 .social-list-icon {
   fill: var(--fill-color);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: fill var(--speed) var(--cubic);
 }
 
 .social-list-link:hover,
@@ -474,8 +464,8 @@ body {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: var(--fill-color);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: fill var(--speed) var(--cubic),
+    border-color var(--speed) var(--cubic);
 }
 .clients-list-link:hover {
   fill: #188ce8;
@@ -556,8 +546,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: background-color var(--speed) var(--cubic);
 }
 
 .social-list-icon-footer {
@@ -596,8 +585,8 @@ body {
   border-radius: 4px;
   padding: 6px 22px;
   margin-right: 8px;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: background-color var(--speed) var(--cubic),
+    color var(--speed) var(--cubic), box-shadow var(--speed) var(--cubic);
 }
 /* Плиточные елементы */
 .container {
@@ -617,6 +606,7 @@ body {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: box-shadow var(--speed) var(--cubic);
 }
 
 .work-list:nth-child(3n) {
@@ -651,13 +641,11 @@ body {
   font-size: 18px;
   line-height: 1.55;
   color: var(--background-accent-color);
-
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 23px;
   overflow: auto;
   transform: translate(0, 100%);
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: transform var(--speed) var(--cubic);
 }
 
 .work-list:hover .overlay {
@@ -706,8 +694,7 @@ body {
   color: var(--accent-text-color);
   margin-right: 50px;
   display: block;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: color var(--speed) var(--cubic);
 }
 
 .mail-address-portfolio:hover,
@@ -722,8 +709,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent-text-color);
   display: block;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+  transition: color var(--speed) var(--cubic);
 }
 
 .phone-number-portfolio:hover,
@@ -746,7 +732,7 @@ body {
 }
 
 /* MODAL */
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -756,54 +742,51 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.modal{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 528px;
-height: 581px;
-background-color: var(--background-accent-color);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--background-accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
-.modal-close-button{
+.modal-close-button {
   position: absolute;
   top: 8px;
   right: 8px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   width: 30px;
   height: 30px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 0;
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
-
+  transition: border-color var(--speed) var(--cubic);
 }
 
 .modal-close-button:hover,
-.modal-close-button:focus{
-border-color: var(--accent-color);
+.modal-close-button:focus {
+  border-color: var(--accent-color);
 }
 
-.modal-close-button-icon{
-  transition-duration: var(--speed);
-  transition-timing-function: var(--cubic);
+.modal-close-button-icon {
+  transition: fill var(--speed) var(--cubic);
 }
 
 .modal-close-button:hover .modal-close-button-icon,
-.modal-close-button:focus .modal-close-button-icon{
-fill: var(--accent-color);
+.modal-close-button:focus .modal-close-button-icon {
+  fill: var(--accent-color);
 }
-
