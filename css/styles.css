@@ -12,7 +12,7 @@
   --background-accent-color: #ffffff;
   --background-second-color: #2f303a;
   --fill-color: #afb1b8;
-  --speed: 500ms;
+  --speed: 250ms;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
