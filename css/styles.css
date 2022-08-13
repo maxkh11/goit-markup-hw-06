@@ -558,7 +558,12 @@ body {
   background-color: var(--accent-color);
 }
 
-.footer-subscribe{
+/* subscribe */
+
+.container-subscribe {
+}
+
+.footer-subscribe {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.16;
@@ -567,7 +572,12 @@ body {
   margin-left: 93px;
 }
 
-.form-email{
+.form-footer {
+  display: flex;
+  align-items: baseline;
+}
+
+.form-email {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -575,28 +585,36 @@ body {
   border-radius: 4px;
   margin-top: 20px;
   margin-left: 93px;
-}
-
-.button-send-footer{
-  display: flex;
-align-items: center;
-justify-content: center;
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 1.9;
-letter-spacing: 0.06em;
-  width: 200px;
-  height: 50px;
-  background-color: var(--accent-color);
+  background: var(--background-second-color);
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: var(--background-accent-color);
 }
 
-.icon-send{
-  margin-left: 10px;
+.button-send-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  background: var(--accent-color);
+  color: var(--background-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  margin-left: 12px;
 }
 
+.icon-send {
+  margin-left: 10px;
+}
 
 /* ================PORTFOLIO================ */
 
@@ -832,9 +850,9 @@ letter-spacing: 0.06em;
   fill: var(--accent-color);
 }
 
-.label{
-position: absolute;
-display: flex;
-padding-top: 200px;
-padding-left: 400px;
+.label {
+  position: absolute;
+  display: flex;
+  padding-top: 200px;
+  padding-left: 400px;
 }
