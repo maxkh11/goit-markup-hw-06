@@ -560,9 +560,6 @@ body {
 
 /* subscribe */
 
-.container-subscribe {
-}
-
 .footer-subscribe {
   font-weight: 700;
   font-size: 14px;
@@ -574,7 +571,8 @@ body {
 
 .form-footer {
   display: flex;
-  align-items: baseline;
+  gap: 12px;
+  align-items: flex-end;
 }
 
 .form-email {
@@ -590,6 +588,12 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   color: var(--background-accent-color);
+  transition: border-color var(--speed) var(--cubic);
+}
+
+.form-email:focus {
+  border-color: var(--background-accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button-send-footer {
@@ -609,11 +613,18 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
-  margin-left: 12px;
+  padding: 10px 29px;
+  transition: background-color var(--speed) var(--cubic);
 }
 
 .icon-send {
   margin-left: 10px;
+}
+
+.button-send-footer:hover,
+.button-send-footer:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ================PORTFOLIO================ */
@@ -848,11 +859,4 @@ body {
 .modal-close-button:hover .modal-close-button-icon,
 .modal-close-button:focus .modal-close-button-icon {
   fill: var(--accent-color);
-}
-
-.label {
-  position: absolute;
-  display: flex;
-  padding-top: 200px;
-  padding-left: 400px;
 }

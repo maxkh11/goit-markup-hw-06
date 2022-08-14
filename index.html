@@ -474,7 +474,24 @@
             </li>
           </ul>
         </div>
-        <div class="container-subscribe">
+        <form class="form-footer">
+          <label>
+            <span class="footer-subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</span>
+            <input
+              class="form-email"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+          </label>
+          <button type="submit" class="button-send-footer">
+            Подписаться
+            <svg class="icon-send" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+        <!-- <div class="container-subscribe">
           <h3 class="footer-subscribe">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
           <form class="form-footer">
             <input
@@ -491,17 +508,50 @@
               </svg>
             </button>
           </form>
-        </div>
+        </div> -->
       </div>
     </footer>
     <!-- MODAL -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- is-hidden -->
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-button" data-modal-close>
           <svg class="modal-close-button-icon" width="11" height="11">
             <use href="./images/symbol-defs.svg#icon-close-modal"></use>
           </svg>
         </button>
+        <form class="model-form">
+          <label class="modal-form-field">
+            <span class="modal-form-input-name">Ім'я</span>
+            <input type="text" class="modal-form-input" />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-name">Телефон</span>
+            <input type="text" class="modal-form-input" />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-name">Пошта</span>
+            <input type="text" class="modal-form-input" />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-name">Коментар</span>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              class="modal-form-message"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <input id="user-policy" type="text" class="modal-form-check" />
+          <label for="user-policy" class="modal-form-check-desc"
+            >Погоджуюся з розсилкою та приймаю<a href=""
+              >Умови договору</a
+            ></label
+          >
+          <button type="submit" class="modal-form-submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
