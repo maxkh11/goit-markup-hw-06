@@ -482,6 +482,8 @@
               type="email"
               name="email"
               placeholder="E-mail"
+              required
+              
             />
           </label>
           <button type="submit" class="button-send-footer">
@@ -520,31 +522,28 @@
             <use href="./images/symbol-defs.svg#icon-close-modal"></use>
           </svg>
         </button>
-        <form class="model-form">
+        <form class="modal-form">
           <label class="modal-form-field">
-            <span class="modal-form-input-name">Ім'я</span>
-            <input type="text" class="modal-form-input" />
+            <span class="modal-form-input-desc">Ім'я</span>
+            <input type="text" name="user_name" class="modal-form-input" required pattern="^[a-zA-Z а-яА-Я]+" minlength="2" />
           </label>
           <label class="modal-form-field">
-            <span class="modal-form-input-name">Телефон</span>
-            <input type="text" class="modal-form-input" />
+            <span class="modal-form-input-desc">Телефон</span>
+            <input type="tel" name="user_phone" class="modal-form-input" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx"/>
           </label>
           <label class="modal-form-field">
-            <span class="modal-form-input-name">Пошта</span>
-            <input type="text" class="modal-form-input" />
+            <span class="modal-form-input-desc">Пошта</span>
+            <input type="email" name="user_email" class="modal-form-input" required />
           </label>
           <label class="modal-form-field">
-            <span class="modal-form-input-name">Коментар</span>
+            <span class="modal-form-input-desc">Коментар</span>
             <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
+              name="user_message"
               class="modal-form-message"
               placeholder="Введіть текст"
             ></textarea>
           </label>
-          <input id="user-policy" type="text" class="modal-form-check" />
+          <input id="user-policy" type="checkbox" name="user_policy" class="modal-form-check" />
           <label for="user-policy" class="modal-form-check-desc"
             >Погоджуюся з розсилкою та приймаю<a href=""
               >Умови договору</a
