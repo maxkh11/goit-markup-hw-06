@@ -976,6 +976,8 @@ body {
   width: 16px;
   height: 15px;
   content: "";
-  border: 1px solid var(--second-accent-color);
-  border-radius: 2px;
+  border: 2px solid var(--second-accent-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
