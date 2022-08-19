@@ -971,17 +971,17 @@ body {
   background-color: var(--background-accent-button);
 }
 
-.modal-form-check-desc{
+.modal-form-check-desc {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .modal-form-check-desc::before {
@@ -998,26 +998,30 @@ letter-spacing: 0.03em;
   border-radius: 4px;
 }
 
-.modal-form-check:checked + .modal-form-check-desc::before{
-background-color: var(--accent-color);
-background-image: url(../images/icon-check.svg);
-background-size: contain;
-border: none;
+.modal-link-contract {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  border: none;
+}
 
-.modal-form-check:focus + .modal-form-check-desc::before{
+.modal-form-check:focus + .modal-form-check-desc::before {
   outline: 2px solid var(--accent-color);
   border: none;
 }
 
-.checkbox{
+.checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.modal-form-submit{
+.modal-form-submit {
   align-self: center;
   margin-top: 30px;
   font-family: "Roboto";
